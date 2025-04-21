@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - bot.py
+      - README.md
 
 jobs:
   build:
