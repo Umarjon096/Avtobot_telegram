@@ -31,8 +31,8 @@ from telegram.ext import Application, MessageHandler, filters, ContextTypes
 #env variables
 import os
 TOKEN = os.getenv('TOKEN')
-SOURCE_CHAT_ID = os.getenv('TOKEN')
-TARGET_CHAT_ID = os.getenv('TOKEN')
+SOURCE_CHAT_ID = os.getenv('SOURCE_CHAT_ID ')
+TARGET_CHAT_ID = os.getenv('TARGET_CHAT_ID')
 
 STORAGE_FILE = "messages_log.json"
 SIMILARITY_THRESHOLD = 0.9  # насколько похожие смс считаются "одинаковыми"
