@@ -1,0 +1,19 @@
+name: Deploy Bot
+on:
+  push:
+    paths:
+      - bot.py
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: cd /var/azizaka_bot && git pull origin main && service azizaka_bot restart
