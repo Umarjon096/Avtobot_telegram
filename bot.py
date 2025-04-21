@@ -5,7 +5,7 @@
 
 """
 Simple Bot to reply to Telegram messages.
-changed 6
+changed 7
 First, a few handler functions are defined. Then, those functions are passed to
 the Application and registered at their respective places.
 Then, the bot is started and runs until we press Ctrl-C on the command line.
@@ -15,8 +15,6 @@ Basic Echobot example, repeats messages.
 Press Ctrl-C on the command line or send a signal to the process to stop the
 bot.
 """
-
-from config import *
 
 
 
